@@ -14,6 +14,7 @@ import (
 )
 
 // serves up our static content like html
+//
 //go:embed static/*
 var staticFiles embed.FS
 
@@ -69,7 +70,6 @@ func main() {
 	staticFs := http.FileServer(getStaticFiles())
 
 	mux := http.NewServeMux()
-	
 
 	// routes
 	mux.HandleFunc("/api", receiveJSONHandler)
