@@ -71,6 +71,8 @@ func main() {
 
 	mux := http.NewServeMux()
 
+
+
 	// routes
 	mux.HandleFunc("/api", receiveJSONHandler)
 	mux.Handle("/", staticFs)
